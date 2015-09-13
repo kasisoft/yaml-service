@@ -1,0 +1,10 @@
+key : value
+list:
+  - {value: 13}
+  - {value: 19}
+  - {value: 34}
+map:
+  13 : {value: 13}
+  19 : {value: 19}
+  34 : {value: 34}
+  
