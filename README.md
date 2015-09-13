@@ -7,11 +7,11 @@ GIT
 COORDINATES
 -----------
 
-  <dependency>
-    <groupId>com.kasisoft.cdi</groupId>
-    <artifactId>yaml-service</artifactId>
-    <version>0.1-SNAPSHOT</version>
-  </dependency>
+    <dependency>
+        <groupId>com.kasisoft.cdi</groupId>
+        <artifactId>yaml-service</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </dependency>
 
 USAGE
 -----
