@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>yaml-service</artifactId>
-  <version>0.7</version>
+  <version>0.8-SNAPSHOT</version>
   
   <name>CDI :: Yaml Service</name>
   <description>CDI :: Service which allows to make use of the Yaml data format</description>
@@ -31,7 +31,7 @@
     <!-- url>...</url-->
     <connection>scm:git:ssh://kasisoft.com:7999/cdi/yaml-service.git</connection>
     <developerConnection>scm:git:ssh://kasisoft.com:7999/cdi/yaml-service.git</developerConnection>
-    <tag>yaml-service-0.7</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
