@@ -39,9 +39,9 @@ public class YamlService {
   ThreadLocal<Map<Class<?>,Yaml>>     yamlInstances;
   
   @Getter
-  String                      frontMatterMarker;
+  String                              frontMatterMarker;
   
-  Map<Class<?>,Constructor>   constructors;
+  Map<Class<?>,Constructor>           constructors;
   
   public YamlService() {
     frontMatterMarker = DEFAULT_FM_MARKER;
