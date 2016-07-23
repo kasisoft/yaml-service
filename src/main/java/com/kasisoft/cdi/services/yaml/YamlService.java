@@ -81,7 +81,7 @@ public class YamlService {
    * @return   A default loader for Yaml bases texts. Not <code>null</code>.
    */
   public YamlLoader newSourceLoader() {
-    return new SourceLoader<SourceWithFrontMatter>( frontMatterMarker, this, SourceWithFrontMatter::new, new DefaultFrontMatterConfigurator<SourceWithFrontMatter>() );
+    return new SourceLoader<>( frontMatterMarker, this, SourceWithFrontMatter::new, new DefaultFrontMatterConfigurator<>() );
   }
 
   /**
@@ -90,7 +90,7 @@ public class YamlService {
    * @return   A loader for Yaml based texts for specific {@link SourceWithFrontMatter}. Not <code>null</code>.
    */
   public <T extends SourceWithFrontMatter> YamlLoader<T> newSourceLoader( @NonNull Supplier<T> factory ) {
-    return new SourceLoader<T>( frontMatterMarker, this, factory, new DefaultFrontMatterConfigurator<T>() );
+    return new SourceLoader<>( frontMatterMarker, this, factory, new DefaultFrontMatterConfigurator<T>() );
   }
 
   /**
@@ -99,11 +99,11 @@ public class YamlService {
    * @return   A loader for Yaml based texts for specific {@link SourceWithFrontMatter}. Not <code>null</code>.
    */
   public <T extends SourceWithFrontMatter> YamlLoader<T> newSourceLoader( @NonNull Supplier<T> factory, @NonNull BiConsumer<T,Object> configurator ) {
-    return new SourceLoader<T>( frontMatterMarker, this, factory, configurator );
+    return new SourceLoader<>( frontMatterMarker, this, factory, configurator );
   }
   
   public <T> YamlLoader<T> newLoader( @NonNull Class<T> targetClass ) {
-    return new ObjectLoader<T>( targetClass, this );
+    return new ObjectLoader<>( targetClass, this );
   }
 
   /**
