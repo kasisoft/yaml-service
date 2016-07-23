@@ -6,11 +6,10 @@
   <parent>
     <groupId>com.kasisoft.cdi</groupId>
     <artifactId>parent</artifactId>
-    <version>0.7</version>
+    <version>0.8-SNAPSHOT</version>
   </parent>
 
   <artifactId>yaml-service</artifactId>
-  <version>0.8-SNAPSHOT</version>
   
   <name>CDI :: Yaml Service</name>
   <description>CDI :: Service which allows to make use of the Yaml data format</description>
@@ -55,7 +54,7 @@
   <properties>
   
     <!-- versioning (java artifacts) -->
-    <version-testbasis>0.7</version-testbasis>
+    <version-testbasis>${project.version}</version-testbasis>
     <version-yaml>1.16</version-yaml>
    
   </properties>
