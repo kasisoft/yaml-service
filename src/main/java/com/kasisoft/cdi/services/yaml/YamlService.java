@@ -3,11 +3,10 @@ package com.kasisoft.cdi.services.yaml;
 import org.yaml.snakeyaml.*;
 import org.yaml.snakeyaml.constructor.Constructor;
 
-import com.kasisoft.libs.common.util.*;
-
 import com.kasisoft.cdi.services.yaml.annotation.*;
 import com.kasisoft.cdi.services.yaml.annotation.Type;
 import com.kasisoft.cdi.services.yaml.internal.*;
+import com.kasisoft.libs.common.text.*;
 
 import lombok.experimental.*;
 

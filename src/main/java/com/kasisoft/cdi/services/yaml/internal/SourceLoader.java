@@ -1,10 +1,9 @@
 package com.kasisoft.cdi.services.yaml.internal;
 
-import com.kasisoft.libs.common.util.*;
-
 import com.kasisoft.libs.common.io.*;
 
 import com.kasisoft.cdi.services.yaml.*;
+import com.kasisoft.libs.common.text.*;
 
 import lombok.*;
 
