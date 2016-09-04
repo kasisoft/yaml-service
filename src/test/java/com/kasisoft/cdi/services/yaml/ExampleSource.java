@@ -10,7 +10,7 @@ import java.util.*;
  * @author daniel.kasmeroglu@kasisoft.net
  */
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Data
+@Data @EqualsAndHashCode(callSuper = true)
 public class ExampleSource extends SourceWithFrontMatter {
 
   List<String>    items = new ArrayList<>();

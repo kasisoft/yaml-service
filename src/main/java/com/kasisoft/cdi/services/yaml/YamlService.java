@@ -1,7 +1,9 @@
 package com.kasisoft.cdi.services.yaml;
 
 import org.yaml.snakeyaml.*;
+import org.yaml.snakeyaml.DumperOptions.*;
 import org.yaml.snakeyaml.constructor.Constructor;
+import org.yaml.snakeyaml.representer.*;
 
 import com.kasisoft.cdi.services.yaml.annotation.*;
 import com.kasisoft.cdi.services.yaml.annotation.Type;
@@ -35,7 +37,7 @@ public class YamlService {
 
   private static final String DEFAULT_FM_MARKER = "---";
 
-  ThreadLocal<Map<Class<?>,Yaml>>     yamlInstances;
+  ThreadLocal<Map<Class<?>, Yaml>>    yamlInstances;
   
   @Getter
   String                              frontMatterMarker;
@@ -48,7 +50,7 @@ public class YamlService {
     yamlInstances     = new ThreadLocal<Map<Class<?>,Yaml>>() {
 
       @Override
-      protected Map<Class<?>,Yaml> initialValue() {
+      protected Map<Class<?>, Yaml> initialValue() {
         // we're using the simple approach here. we could use an explicit root type provided
         // by the caller but that wouldn't allow to use lenient pojos as each yaml node would
         // have to exist as a property
@@ -105,6 +107,10 @@ public class YamlService {
     return new ObjectLoader<>( targetClass, this );
   }
 
+  public <T> YamlSaver<T> newSaver() {
+    return new ObjectSaver<>( this );
+  }
+
   /**
    * Returns the current thread local {@link Yaml} instance.
    * 
@@ -124,7 +130,10 @@ public class YamlService {
       Map<Class<?>,Yaml> map    = yamlInstances.get();
       Yaml               result = map.get( targetClass );
       if( result == null ) {
-        result = new Yaml( getConstructor( targetClass ) );
+        DumperOptions options = new DumperOptions();
+        options.setDefaultFlowStyle( FlowStyle.BLOCK );
+        options.setIndent(2);
+        result = new Yaml( getConstructor( targetClass ), new Representer(), options );
         map.put( targetClass, result );
       }
       return result;
