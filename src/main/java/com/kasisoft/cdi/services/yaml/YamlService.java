@@ -1,29 +1,27 @@
 package com.kasisoft.cdi.services.yaml;
 
-import org.yaml.snakeyaml.*;
-import org.yaml.snakeyaml.DumperOptions.*;
-import org.yaml.snakeyaml.constructor.Constructor;
-import org.yaml.snakeyaml.representer.*;
-
 import com.kasisoft.cdi.services.yaml.annotation.*;
 import com.kasisoft.cdi.services.yaml.annotation.Type;
 import com.kasisoft.cdi.services.yaml.internal.*;
 import com.kasisoft.libs.common.text.*;
 
-import lombok.experimental.*;
-
-import lombok.*;
-
-import javax.inject.*;
+import org.yaml.snakeyaml.*;
+import org.yaml.snakeyaml.DumperOptions.*;
+import org.yaml.snakeyaml.constructor.Constructor;
+import org.yaml.snakeyaml.representer.*;
 
 import javax.ejb.*;
-import javax.ejb.Singleton;
+import javax.inject.*;
+import javax.inject.Singleton;
 
 import java.util.function.*;
 
 import java.util.*;
 
 import java.lang.reflect.*;
+
+import lombok.experimental.*;
+import lombok.*;
 
 /**
  * The service is used to provide Yaml parsers and loaders for source with front matter configurations.
@@ -42,11 +40,11 @@ public class YamlService {
   @Getter
   String                              frontMatterMarker;
   
-  Map<Class<?>,Constructor>           constructors;
+  Map<Class<?>, Constructor>          constructors;
   
   public YamlService() {
     frontMatterMarker = DEFAULT_FM_MARKER;
-    constructors      = new Hashtable<>();
+    constructors      = new HashMap<>();
     yamlInstances     = new ThreadLocal<Map<Class<?>,Yaml>>() {
 
       @Override
@@ -74,7 +72,6 @@ public class YamlService {
     }
     frontMatterMarker = newvalue;
   }
-  
   
   /**
    * Returns a default loader for Yaml based texts.
