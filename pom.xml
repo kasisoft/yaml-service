@@ -91,7 +91,7 @@
       <version>${version-kcl}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
+      <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
       <version>${version-javaee}</version>
       <scope>provided</scope>
