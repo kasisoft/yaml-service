@@ -1,3 +1,7 @@
+# DISCONTINUED
+# DISCONTINUED
+# DISCONTINUED
+
 # Purpose
 
 
@@ -7,9 +11,7 @@ A simple service allowing to use Yaml.
 # Infos
 
 * [eMail: daniel.kasmeroglu@kasisoft.net](mailto:daniel.kasmeroglu@kasisoft.net)
-* [Jira](https://kasisoft.com/jira/projects/CDIYAML)
-* [Jenkins](https://kasisoft.com/jenkins/job/cdi.yaml-service)
-* [GIT](https://kasisoft.com/bitbucket/projects/CDI/repos/yaml-service)
+* [GIT](https://kasisoft.com/bitbucket/projects/GRAV/repos/yaml-service)
 
 
 # Development Setup

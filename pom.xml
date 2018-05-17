@@ -31,9 +31,9 @@
   </organization>
   
   <scm>
-    <url>https://kasisoft.com/bitbucket/projects/CDI/repos/yaml-service</url>
-    <connection>scm:git:ssh://kasisoft.com:7999/cdi/yaml-service.git</connection>
-    <developerConnection>scm:git:ssh://kasisoft.com:7999/cdi/yaml-service.git</developerConnection>
+    <url>https://kasisoft.com/bitbucket/projects/GRAV/repos/yaml-service</url>
+    <connection>scm:git:ssh://kasisoft.com:7999/grav/yaml-service.git</connection>
+    <developerConnection>scm:git:ssh://kasisoft.com:7999/grav/yaml-service.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   
